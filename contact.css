@@ -1,0 +1,207 @@
+.header{
+    height: 70vh;
+    padding: 0;
+    margin: 0; 
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)), url(./resources/images/accomplishments-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.contact-us{
+
+    display: grid;
+    grid-template-columns: 35vw 1fr;
+    padding:3rem;
+}
+.sider{
+    grid-column: 1/2;
+}
+.sider__address{
+    font-size: 1.5rem;
+}
+.sider__address__heading{
+    color: rgb(2,18,32);
+    font-size: 3rem; 
+    margin-bottom: 0;
+}
+.main{
+    display: grid;
+    grid-template-rows: max-content 1fr; 
+
+}
+
+
+
+
+
+
+
+
+.locations{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 1.5rem;
+}
+.location{
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+.location__heading{
+    font-size: 1.6rem;
+    color: #8b0000;
+    margin-bottom: .5rem;
+}
+.icon{
+    height: 2rem ;
+    width: 2rem;
+    fill: rgb(2,18,32);
+    background-color: rgb(2, 18, 32);
+    justify-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+.picker {    
+    width: 99%;                        
+    height: 100%;                   
+    color: grey;   
+    justify-self: center;     
+    font-size: 1.5rem; 
+    outline: none;
+    border: none;    
+
+
+}
+
+.enquiry__container{
+    grid-column: 2/3;
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(18rem,1fr));  
+    grid-gap:1rem;
+}
+.enquiry__heading{
+    font-size: 2.5rem;
+    color: rgb(2,18,32);
+    text-align: center; 
+}
+
+.form{
+    padding-left: 1rem;
+    height: 5rem; 
+    width: 100%;     
+    justify-self: center;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-content: center; 
+    border: 1.2px solid rgb(2,18,32); 
+    position: relative;
+    overflow: hidden;
+ 
+    
+}
+.form::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 5px solid rgb(2, 18, 32);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.form:focus-within::after{
+    transform: translateX(0%); 
+
+}
+.form:focus-within{    
+    border:none;
+    
+}
+svg{
+    fill:rgb(2,18,32); 
+}
+
+.icon-form{ 
+    height: 2rem;
+    width: 2rem;                
+    margin: .5rem;
+    margin-right: 1rem;  
+    fill:rgb(100, 97, 97);
+}  
+
+.input{
+    width: 98%; 
+    border-style: none;
+    font-size: 1.3rem;
+    color: grey;
+    outline: none;
+   font-weight: 100;
+}
+
+
+
+
+
+
+.button__container{
+    position: relative;
+    height: 5rem;
+    margin-top: 2rem;
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 3.5rem;
+    width: 8rem;
+    border-radius: 3px; 
+    background-color: rgb(2, 18, 32);
+
+}
+.button::before{
+    content: "";
+    background-color: #8b0000;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    transform: scaleX(0);
+    transition: all .5s ease-in;
+    
+}
+.button__a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    
+} 
+.button:hover::before{
+    transform: scaleX(1);
+}
+
+.button:hover .button__a{
+    color: white;
+}
